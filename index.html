@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario EIR 2025-2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://core.service.elfsight.com" rel="preconnect" crossorigin="">
+    <link href="https://static.elfsight.com" rel="preconnect" crossorigin="">
+    <link href="https://service-reviews-ultimate.elfsight.com" rel="preconnect" crossorigin="">
+    <link href="https://storage.elfsight.com" rel="preconnect" crossorigin="">
+    <style data-fullcalendar=""></style>
+    <style type="text/css">
+        div.eapps-widget {
+            position: relative
+        }
+
+        div.eapps-widget.eapps-widget-show-toolbar:before {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            border: 1px solid transparent;
+            transition: border .3s ease;
+            z-index: 1
+        }
+
+        .eapps-widget-toolbar {
+            position: absolute;
+            top: -32px;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 99999;
+            padding-bottom: 4px;
+            transition: all .3s ease;
+            pointer-events: none;
+            opacity: 0
+        }
+
+        .eapps-widget:hover .eapps-widget-toolbar {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .eapps-widget-toolbar a {
+            text-decoration: none;
+            box-shadow: none !important
+        }
+
+        .eapps-widget-toolbar-panel {
+            border-radius: 6px;
+            background-color: #222;
+            color: #fff;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -ms-flex-align: center;
+            align-items: center;
+            top: 0;
+            position: relative;
+            transition: all .3s ease;
+            opacity: 0;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .2);
+            height: 28px
+        }
+
+        .eapps-widget:hover .eapps-widget-toolbar-panel {
+            opacity: 1
+        }
+
+        .eapps-widget-toolbar-panel-wrapper {
+            width: 100%;
+            position: relative
+        }
+
+        .eapps-widget-toolbar-panel-only-you {
+            position: absolute;
+            top: -24px;
+            font-size: 11px;
+            line-height: 14px;
+            color: #9c9c9c;
+            padding: 5px 4px
+        }
+
+        .eapps-widget-toolbar-panel-logo {
+            width: 28px;
+            height: 28px;
+            border-right: 1px solid hsla(0, 0%, 100%, .2);
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+
+        .eapps-widget-toolbar-panel-logo svg {
+            display: block;
+            width: 15px;
+            height: 15px;
+            fill: #f93262
+        }
+
+        .eapps-widget-toolbar-panel-edit {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 9px;
+            border-right: 1px solid hsla(0, 0%, 100%, .2);
+            color: #fff;
+            text-decoration: none
+        }
+
+        .eapps-widget-toolbar-panel-edit-icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px
+        }
+
+        .eapps-widget-toolbar-panel-edit-icon svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            fill: #fff
+        }
+
+        .eapps-widget-toolbar-panel-views {
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .eapps-widget-toolbar-panel-views-label {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            margin-left: 8px
+        }
+
+        .eapps-widget-toolbar-panel-views-bar {
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            width: 70px;
+            height: 3px;
+            border-radius: 2px;
+            margin-left: 8px;
+            background-color: hsla(0, 0%, 100%, .3)
+        }
+
+        .eapps-widget-toolbar-panel-views-bar-inner {
+            border-radius: 2px;
+            background-color: #4ad504
+        }
+
+        .eapps-widget-toolbar-panel-views-green .eapps-widget-toolbar-panel-views-bar-inner {
+            background-color: #4ad504
+        }
+
+        .eapps-widget-toolbar-panel-views-red .eapps-widget-toolbar-panel-views-bar-inner {
+            background-color: #ff4734
+        }
+
+        .eapps-widget-toolbar-panel-views-orange .eapps-widget-toolbar-panel-views-bar-inner {
+            background-color: #ffb400
+        }
+
+        .eapps-widget-toolbar-panel-views-percent {
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px
+        }
+
+        .eapps-widget-toolbar-panel-views-get-more {
+            padding: 9px 16px;
+            background-color: #f93262;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            border-radius: 0 6px 6px 0
+        }
+
+        .eapps-widget-toolbar-panel-share {
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            margin-left: 8px;
+            width: 83px;
+            height: 28px;
+            padding-bottom: 4px;
+            box-sizing: content-box !important
+        }
+
+        .eapps-widget-toolbar-panel-share:hover .eapps-widget-toolbar-panel-share-block {
+            opacity: 1;
+            pointer-events: all
+        }
+
+        .eapps-widget-toolbar-panel-share-button {
+            padding: 0 18px;
+            height: 28px;
+            background-color: #1c91ff;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            cursor: default;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .eapps-widget-toolbar-panel-share-button svg {
+            display: inline-block;
+            margin-right: 6px;
+            fill: #fff;
+            position: relative;
+            top: -1px
+        }
+
+        .eapps-widget-toolbar-panel-share-block {
+            position: absolute;
+            background: #fff;
+            border: 1px solid hsla(0, 0%, 7%, .1);
+            border-radius: 10px;
+            width: 209px;
+            top: 32px;
+            transform: translateX(-63px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all .3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .05)
+        }
+
+        .eapps-widget-toolbar-panel-share-block:hover {
+            opacity: 1;
+            pointer-events: all
+        }
+
+        .eapps-widget-toolbar-panel-share-block-text {
+            color: #111;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 12px 0;
+            text-align: center
+        }
+
+        .eapps-widget-toolbar-panel-share-block-text-icon {
+            padding-bottom: 4px
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            border-top: 1px solid hsla(0, 0%, 7%, .1)
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item {
+            width: 33.333333%;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 39px;
+            transition: all .3s ease;
+            background-color: transparent
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item:hover {
+            background-color: #fafafa
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item a {
+            width: 100%;
+            height: 100%;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item-icon {
+            width: 16px;
+            height: 16px;
+            display: block
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item-facebook .eapps-widget-toolbar-panel-share-block-actions-item-icon {
+            fill: #3c5a9b
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item-twitter .eapps-widget-toolbar-panel-share-block-actions-item-icon {
+            fill: #1ab2e8
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item-google .eapps-widget-toolbar-panel-share-block-actions-item-icon {
+            fill: #dd4b39
+        }
+
+        .eapps-widget-toolbar-panel-share-block-actions-item:not(:last-child) {
+            border-right: 1px solid hsla(0, 0%, 7%, .1)
+        }
+    </style>
+    <script
+        src="https://universe-static.elfsightcdn.com/app-releases/event-calendar/stable/v2.39.5/f28ba3cf6b443ab190192f0f07a55aa7cd36e3be/widget/eventCalendar.js"
+        async="" charset="UTF-8"></script>
+    <style data-styled="active" data-styled-version="6.1.16"></style>
+    <style data-styled="active" data-styled-version="6.1.16"></style>
+</head>
+
+<body style="font-family: Arial; text-align: center;">
+
+    <!-- AQUÍ VA TU CÓDIGO DE ELFSIGHT -->
+    <script src="https://elfsightcdn.com/platform.js" async=""></script>
+    <div class="elfsight-app-864ab1d0-2fd2-4a88-8cac-9ae1dec2cc47" data-elfsight-app-lazy=""
+        data-miwrid="1ab8bf98-abb0-4481-a1fa-797df46d00e6">
+        <div class="EmbedRoot__Root-sc-2cafecf5-0 fyEOvc es-embed-root eapps-event-calendar-864ab1d0-2fd2-4a88-8cac-9ae1dec2cc47-custom-css-root"
+            style="max-width: 1260px;">
+            <div class="FontWrapper__Container-sc-7f1ebf5f-0">
+                <div class="WidgetBackground__Container-sc-386b5057-0 jFNRRy es-widget-background-container"
+                    style="border-radius: 0px;">
+                    <div class="WidgetBackground__Wrapper-sc-386b5057-1 dIlOny es-widget-background-wrapper"
+                        style="padding: 40px;">
+                        <div class="Background__Container-sc-fd94690c-0 iRfhKy es-background-container"
+                            style="border-radius: 0px;">
+                            <div class="Background__Base-sc-fd94690c-1 kinpGA es-background-base"
+                                style="display: block; background-color: rgb(35, 36, 39);"></div>
+                            <div class="Background__Overlay-sc-fd94690c-2 jtZZdl es-background-overlay"
+                                style="display: block; background-color: rgba(255, 255, 255, 0);"></div>
+                        </div>
+                        <div
+                            class="WidgetBackground__Content-sc-386b5057-2 cMTovS es-widget-background-content WidgetBackground__ContentContainer-sc">
+                            <div
+                                class="EventCalendar__Component-sc-57c20dcd-0 cbMcDM eapp-events-calendar-events-calendar-component">
+                                <div
+                                    class="EventCalendar__Header-sc-57c20dcd-1 lhnaup eapp-events-calendar-events-calendar-header">
+                                    <div
+                                        class="Filters__FiltersContainer-sc-2a67aef1-0 ePayNx es-filters-container eapp-events-calendar-controls-component">
+                                        <div
+                                            class="Filters__FiltersWrapper-sc-2a67aef1-1 bDCpKR es-filters-wrapper eapp-events-calendar-controls-wrapper">
+                                            <button type="button" aria-haspopup="dialog" aria-expanded="false"
+                                                aria-controls="radix-:r0:" data-state="closed"
+                                                class="base-button__Button-sc-91bff0d7-3 ediGNo es-filter-button-button"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20"
+                                                    height="20"
+                                                    class="base-button__StyledSlot-sc-91bff0d7-1 jJjVAy es-filter-button-slot">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.733 7.49h-2.65a.833.833 0 0 1 0-1.666h2.595a2.918 2.918 0 0 1 5.645.005.842.842 0 0 1 .094-.005h7.5a.833.833 0 0 1 0 1.666h-7.5a.84.84 0 0 1-.146-.012 2.918 2.918 0 0 1-5.538.012Zm1.517-.925a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Zm9.019 7.795h2.65a.833.833 0 0 0 0-1.667h-2.596a2.918 2.918 0 0 0-5.644.005.854.854 0 0 0-.094-.005H2.084a.833.833 0 0 0 0 1.667h7.501a.84.84 0 0 0 .145-.013 2.918 2.918 0 0 0 5.539.013Zm-1.517-.925a1.25 1.25 0 1 0-2.5 0 1.25 1.25 0 0 0 2.5 0Z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg><span
+                                                    class="base-button__Text-sc-91bff0d7-2 es-filter-button-text">Filtros</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="EventCalendar__LayoutContainer-sc-57c20dcd-3 gCdfBr eapp-events-calendar-events-calendar-layout">
+                                    <div
+                                        class="Layout__Container-sc-ddb2e617-0 cZlNPS eapp-events-calendar-layout-container">
+                                        <div
+                                            class="Masonry__Component-sc-f003aa10-0 jWjEOC eapp-events-calendar-masonry-component">
+                                            <div
+                                                class="Masonry__Group-sc-f003aa10-1 dyGWib eapp-events-calendar-masonry-group">
+                                                <div
+                                                    class="Masonry__Name-sc-f003aa10-2 flREQt eapp-events-calendar-masonry-name">
+                                                    <div
+                                                        class="DateElement__Item-sc-a644860a-0 hcDjYy eapp-events-calendar-date-element-item">
+                                                        Lunes, 16 de febrero</div>
+                                                </div>
+                                                <div
+                                                    class="Masonry__MasonryOuter-sc-f003aa10-3 cSJPne eapp-events-calendar-masonry-masonryOuter">
+                                                    <div class="Masonry__MasonryContainer-sc-9cf361e0-0 cglWTV eapp-events-calendar-masonry-masonry"
+                                                        style="height: 1049px;">
+                                                        <div class="Masonry__MasonryItemContainer-sc-f003aa10-4 gysiBU eapp-events-calendar-masonry-item"
+                                                            style="position: absolute; top: 0px; left: 0px; transform: translate(0px, 0px); width: 304px;">
+                                                            <div tabindex="0" aria-label="Event: Introducción a ROS 2"
+                                                                class="MasonryItem__Component-sc-af5a1e58-2 lAlJN eapp-events-calendar-masonry-item-component eapp-events-calendar-masonry-item-imageBackground">
+                                                                <script
+                                                                    type="application/ld+json">{"@context":"http://schema.org/","@type":"Event","name":"Introducción a ROS 2","startDate":"2026-02-16","endDate":"2026-02-16","description":"La Dra. Leticia Oyuki Rojas Pérez es una profesional comprometida con la excelencia académica y el desarrollo científico, destacándose por su trayectoria en investigación y formación de estudiantes. A lo largo de su carrera ha participado en proyectos que promueven la innovación y el fortalecimiento del conocimiento en su área de especialidad. Su labor se distingue por el liderazgo, la ética profesional y la dedicación a la generación y difusión del saber, contribuyendo activamente al crecimiento académico y profesional de su comunidad.","image":"https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/a18b9636-12c5-4148-a3fc-fdca4329d1c0/Leticia-Oyuki-Rojas-Perez.jpg"}</script>
+                                                                <div class="MasonryItem__Inner-sc-af5a1e58-0 fCXZSo eapp-events-calendar-masonry-item-inner"
+                                                                    style="border-radius: 0px;">
+                                                                    <div
+                                                                        class="MediaSection__ImageContainer-sc-d492f129-0 fUsAeP eapp-events-calendar-masonry-item-imageContainer">
+                                                                        <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/a18b9636-12c5-4148-a3fc-fdca4329d1c0/Leticia-Oyuki-Rojas-Perez.jpg"
+                                                                            alt="Picture for 'Introducción a ROS 2' event"
+                                                                            loading="lazy"
+                                                                            class="Media__Image-sc-f0f5180f-0 cCLZNM eapp-events-calendar-media-image eapp-events-calendar-media-image-loaded"
+                                                                            style="opacity: 1;"></div>
+                                                                    <div
+                                                                        class="MasonryItem__Info-sc-af5a1e58-1 iCJnge eapp-events-calendar-masonry-item-info">
+                                                                        <div
+                                                                            class="Category__CategoryComponent-sc-589890d7-0 biBToU eapp-events-calendar-category-component CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                            <div aria-label="Event category"
+                                                                                class="Category__CategoryItem-sc-589890d7-1 gOWTTu eapp-events-calendar-category-item CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                                Talleristas</div>
+                                                                        </div>
+                                                                        <div class="Name__Component-sc-861ba5b5-0 WMXJH eapp-events-calendar-name-component NameSection__NameComponent-sc-e9a6cf1d-0 kMhApT eapp-events-calendar-masonry-item-name"
+                                                                            aria-label="Event name">Introducción a ROS 2
+                                                                        </div>
+                                                                        <div tabindex="0" aria-label="Event tags"
+                                                                            class="Tags__Component-sc-4f5ac6bf-0 kJjudQ eapp-events-calendar-tags-component TagsSection__TagsComponent-sc-cb0c4861-0 looLUz eapp-events-calendar-masonry-item-tags">
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Dra. Leticia Oyuki Rojas Pérez</div>
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Instructor – Programa EIR 2026</div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="LocationAndTimeSection__LocationAndTime-sc-b047c37d-0 dBMaOK eapp-events-calendar-masonry-item-locationAndTime">
+                                                                            <div
+                                                                                class="Time__Component-sc-f5e943dd-0 funoZE eapp-events-calendar-time-component LocationAndTimeSection__TimeComponent-sc-b047c37d-1 dOUgVk eapp-events-calendar-masonry-item-time">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="12" height="12"
+                                                                                    viewBox="0 0 12 12"
+                                                                                    aria-hidden="true"
+                                                                                    class="Time__Icon-sc-f5e943dd-1 iJgEnM eapp-events-calendar-time-icon">
+                                                                                    <path
+                                                                                        d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm.984-4.97a.454.454 0 0 1-.07.154l-.026.038a.5.5 0 0 1-.655.148L3.55 5.857a.454.454 0 0 1-.149-.655.551.551 0 0 1 .722-.164l1.877 1.059V2.9a.5.5 0 1 1 1 0v4a.5.5 0 0 1-.017.13z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="Time__Text-sc-f5e943dd-2 fVbGFx eapp-events-calendar-time-text">
+                                                                                    <div tabindex="0"
+                                                                                        aria-label="Start time: 9:00 a.m., end time: 12:00 p.m."
+                                                                                        class="Time__TimeComponent-sc-f5e943dd-3 bEjMob eapp-events-calendar-time-time">
+                                                                                        9:00 a.m. - 12:00 p.m.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Masonry__MasonryItemContainer-sc-f003aa10-4 gysiBU eapp-events-calendar-masonry-item"
+                                                            style="position: absolute; top: 0px; left: 0px; transform: translate(306px, 0px); width: 304px;">
+                                                            <div tabindex="0"
+                                                                aria-label="Event: &quot;De la percepción a la comprensión en robots inteligentes y móviles: Más allá del ciclo percepción-planificación/decisión-acción&quot;"
+                                                                class="MasonryItem__Component-sc-af5a1e58-2 lAlJN eapp-events-calendar-masonry-item-component eapp-events-calendar-masonry-item-imageBackground">
+                                                                <script
+                                                                    type="application/ld+json">{"@context":"http://schema.org/","@type":"Event","name":"&quot;De la percepción a la comprensión en robots inteligentes y móviles: Más allá del ciclo percepción-planificación/decisión-acción&quot;","startDate":"2026-02-16","endDate":"2026-02-16","description":"Doctor en Ingeniería y Director de la Maestría en Inteligencia Artificial y Ciencias de Datos. Es Ingeniero Electricista por la Universidad del Valle, con Maestría en Automática. Cuenta con amplia trayectoria docente en la Universidad del Valle, la Pontificia Universidad Javeriana y la Universidad Autónoma de Occidente. Desarrolla investigación en control automático e inteligencia computacional aplicada a la educación, así como en el diseño de soluciones tecnológicas orientadas a la formación académica y la dirección de programas académicos de posgrado.","image":"https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/00554c14-225d-46a0-8d98-dbb58886b6b6/1622209558471-1-.jpg"}</script>
+                                                                <div class="MasonryItem__Inner-sc-af5a1e58-0 btUojG eapp-events-calendar-masonry-item-inner"
+                                                                    style="border-radius: 0px;">
+                                                                    <div
+                                                                        class="MediaSection__ImageContainer-sc-d492f129-0 ecBLcl eapp-events-calendar-masonry-item-imageContainer">
+                                                                        <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/00554c14-225d-46a0-8d98-dbb58886b6b6/1622209558471-1-.jpg"
+                                                                            alt="Picture for '&quot;De la percepción a la comprensión en robots inteligentes y móviles: Más allá del ciclo percepción-planificación/decisión-acción&quot;' event"
+                                                                            loading="lazy"
+                                                                            class="Media__Image-sc-f0f5180f-0 cCLZNM eapp-events-calendar-media-image eapp-events-calendar-media-image-loaded"
+                                                                            style="opacity: 1;"></div>
+                                                                    <div
+                                                                        class="MasonryItem__Info-sc-af5a1e58-1 iCJnge eapp-events-calendar-masonry-item-info">
+                                                                        <div
+                                                                            class="Category__CategoryComponent-sc-589890d7-0 biBToU eapp-events-calendar-category-component CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                            <div aria-label="Event category"
+                                                                                class="Category__CategoryItem-sc-589890d7-1 gOWTTu eapp-events-calendar-category-item CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                                Conferencia Magistral</div>
+                                                                        </div>
+                                                                        <div class="Name__Component-sc-861ba5b5-0 WMXJH eapp-events-calendar-name-component NameSection__NameComponent-sc-e9a6cf1d-0 kMhApT eapp-events-calendar-masonry-item-name"
+                                                                            aria-label="Event name">"De la percepción a
+                                                                            la comprensión en robots inteligentes y
+                                                                            móviles: Más allá del ciclo
+                                                                            percepción-planificación/decisión-acción"
+                                                                        </div>
+                                                                        <div tabindex="0" aria-label="Event tags"
+                                                                            class="Tags__Component-sc-4f5ac6bf-0 kJjudQ eapp-events-calendar-tags-component TagsSection__TagsComponent-sc-cb0c4861-0 looLUz eapp-events-calendar-masonry-item-tags">
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Fernando Santos Osorio</div>
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Profesor Doctor – Universidad de São
+                                                                                Paulo (USP)</div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="LocationAndTimeSection__LocationAndTime-sc-b047c37d-0 dBMaOK eapp-events-calendar-masonry-item-locationAndTime">
+                                                                            <div
+                                                                                class="Time__Component-sc-f5e943dd-0 funoZE eapp-events-calendar-time-component LocationAndTimeSection__TimeComponent-sc-b047c37d-1 dOUgVk eapp-events-calendar-masonry-item-time">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="12" height="12"
+                                                                                    viewBox="0 0 12 12"
+                                                                                    aria-hidden="true"
+                                                                                    class="Time__Icon-sc-f5e943dd-1 iJgEnM eapp-events-calendar-time-icon">
+                                                                                    <path
+                                                                                        d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm.984-4.97a.454.454 0 0 1-.07.154l-.026.038a.5.5 0 0 1-.655.148L3.55 5.857a.454.454 0 0 1-.149-.655.551.551 0 0 1 .722-.164l1.877 1.059V2.9a.5.5 0 1 1 1 0v4a.5.5 0 0 1-.017.13z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="Time__Text-sc-f5e943dd-2 fVbGFx eapp-events-calendar-time-text">
+                                                                                    <div tabindex="0"
+                                                                                        aria-label="Start time: 12:00 p.m., end time: 1:00 p.m."
+                                                                                        class="Time__TimeComponent-sc-f5e943dd-3 bEjMob eapp-events-calendar-time-time">
+                                                                                        12:00 p.m. - 1:00 p.m.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Masonry__MasonryItemContainer-sc-f003aa10-4 gysiBU eapp-events-calendar-masonry-item"
+                                                            style="position: absolute; top: 0px; left: 0px; transform: translate(612px, 0px); width: 304px;">
+                                                            <div tabindex="0" aria-label="Event: Receso"
+                                                                class="MasonryItem__Component-sc-af5a1e58-2 lAlJN eapp-events-calendar-masonry-item-component eapp-events-calendar-masonry-item-imageBackground">
+                                                                <script
+                                                                    type="application/ld+json">{"@context":"http://schema.org/","@type":"Event","name":"Receso","startDate":"2026-02-16","endDate":"2026-02-19","description":"Es un área destinada a fomentar la convivencia, el intercambio de ideas y el descanso entre los participantes de un evento o comunidad académica. Este espacio promueve la integración, el networking y la comunicación informal, permitiendo fortalecer relaciones profesionales y personales en un ambiente cómodo y dinámico. Además, contribuye al bienestar de los asistentes al ofrecer un momento de pausa dentro de las actividades programadas.","image":"https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/7c852a95-49b1-4fcf-8fec-e7168b37f58d/_8a4b969e-f022-4207-8ac6-496613118a10.jpg"}</script>
+                                                                <div class="MasonryItem__Inner-sc-af5a1e58-0 ldVrYv eapp-events-calendar-masonry-item-inner"
+                                                                    style="border-radius: 0px;">
+                                                                    <div
+                                                                        class="MediaSection__ImageContainer-sc-d492f129-0 chEfPw eapp-events-calendar-masonry-item-imageContainer">
+                                                                        <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/7c852a95-49b1-4fcf-8fec-e7168b37f58d/_8a4b969e-f022-4207-8ac6-496613118a10.jpg"
+                                                                            alt="Picture for 'Receso' event"
+                                                                            loading="lazy"
+                                                                            class="Media__Image-sc-f0f5180f-0 cCLZNM eapp-events-calendar-media-image eapp-events-calendar-media-image-loaded"
+                                                                            style="opacity: 1;"></div>
+                                                                    <div
+                                                                        class="MasonryItem__Info-sc-af5a1e58-1 iCJnge eapp-events-calendar-masonry-item-info">
+                                                                        <div
+                                                                            class="Category__CategoryComponent-sc-589890d7-0 biBToU eapp-events-calendar-category-component CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                            <div aria-label="Event category"
+                                                                                class="Category__CategoryItem-sc-589890d7-1 hpEuJm eapp-events-calendar-category-item CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                                Espacio de Interacción</div>
+                                                                        </div>
+                                                                        <div class="Name__Component-sc-861ba5b5-0 bQbasX eapp-events-calendar-name-component NameSection__NameComponent-sc-e9a6cf1d-0 kMhApT eapp-events-calendar-masonry-item-name"
+                                                                            aria-label="Event name">Receso</div>
+                                                                        <div
+                                                                            class="LocationAndTimeSection__LocationAndTime-sc-b047c37d-0 dBMaOK eapp-events-calendar-masonry-item-locationAndTime">
+                                                                            <div
+                                                                                class="Time__Component-sc-f5e943dd-0 exmRKU eapp-events-calendar-time-component LocationAndTimeSection__TimeComponent-sc-b047c37d-1 dOUgVk eapp-events-calendar-masonry-item-time">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="12" height="12"
+                                                                                    viewBox="0 0 12 12"
+                                                                                    aria-hidden="true"
+                                                                                    class="Time__Icon-sc-f5e943dd-1 jWplvk eapp-events-calendar-time-icon">
+                                                                                    <path
+                                                                                        d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm.984-4.97a.454.454 0 0 1-.07.154l-.026.038a.5.5 0 0 1-.655.148L3.55 5.857a.454.454 0 0 1-.149-.655.551.551 0 0 1 .722-.164l1.877 1.059V2.9a.5.5 0 1 1 1 0v4a.5.5 0 0 1-.017.13z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="Time__Text-sc-f5e943dd-2 kbegLt eapp-events-calendar-time-text">
+                                                                                    <div tabindex="0"
+                                                                                        aria-label="Start time: 1:00 p.m., end time: 2:00 p.m."
+                                                                                        class="Time__TimeComponent-sc-f5e943dd-3 bEjMob eapp-events-calendar-time-time">
+                                                                                        16 de febrero 1:00 p.m. - 19 de
+                                                                                        febrero 2:00 p.m.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Masonry__MasonryItemContainer-sc-f003aa10-4 gysiBU eapp-events-calendar-masonry-item"
+                                                            style="position: absolute; top: 0px; left: 0px; transform: translate(0px, 507px); width: 304px;">
+                                                            <div tabindex="0"
+                                                                aria-label="Event: Introducción al Torneo FutBotMX"
+                                                                class="MasonryItem__Component-sc-af5a1e58-2 lAlJN eapp-events-calendar-masonry-item-component eapp-events-calendar-masonry-item-imageBackground">
+                                                                <script
+                                                                    type="application/ld+json">{"@context":"http://schema.org/","@type":"Event","name":"Introducción al Torneo FutBotMX","startDate":"2026-02-16","endDate":"2026-02-17","description":"","image":"https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/e632be83-cbd7-4dd4-a2ba-6a0f14375cd5/Captura-de-pantalla-2026-01-19-092736.png"}</script>
+                                                                <div class="MasonryItem__Inner-sc-af5a1e58-0 fCXZSo eapp-events-calendar-masonry-item-inner"
+                                                                    style="border-radius: 0px;">
+                                                                    <div
+                                                                        class="MediaSection__ImageContainer-sc-d492f129-0 fUsAeP eapp-events-calendar-masonry-item-imageContainer">
+                                                                        <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/e632be83-cbd7-4dd4-a2ba-6a0f14375cd5/Captura-de-pantalla-2026-01-19-092736.png"
+                                                                            alt="Picture for 'Introducción al Torneo FutBotMX' event"
+                                                                            loading="lazy"
+                                                                            class="Media__Image-sc-f0f5180f-0 cCLZNM eapp-events-calendar-media-image eapp-events-calendar-media-image-loaded"
+                                                                            style="opacity: 1;"></div>
+                                                                    <div
+                                                                        class="MasonryItem__Info-sc-af5a1e58-1 iCJnge eapp-events-calendar-masonry-item-info">
+                                                                        <div class="Name__Component-sc-861ba5b5-0 WMXJH eapp-events-calendar-name-component NameSection__NameComponent-sc-e9a6cf1d-0 kMhApT eapp-events-calendar-masonry-item-name"
+                                                                            aria-label="Event name">Introducción al
+                                                                            Torneo FutBotMX</div>
+                                                                        <div tabindex="0" aria-label="Event tags"
+                                                                            class="Tags__Component-sc-4f5ac6bf-0 kJjudQ eapp-events-calendar-tags-component TagsSection__TagsComponent-sc-cb0c4861-0 looLUz eapp-events-calendar-masonry-item-tags">
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Julio Sandría, Erick Sánchez, Javier
+                                                                                Delgado</div>
+                                                                            <div
+                                                                                class="Tags__Item-sc-4f5ac6bf-1 jYoIFZ eapp-events-calendar-tags-item">
+                                                                                Instructor – Programa EIR 2026</div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="LocationAndTimeSection__LocationAndTime-sc-b047c37d-0 dBMaOK eapp-events-calendar-masonry-item-locationAndTime">
+                                                                            <div
+                                                                                class="Time__Component-sc-f5e943dd-0 funoZE eapp-events-calendar-time-component LocationAndTimeSection__TimeComponent-sc-b047c37d-1 dOUgVk eapp-events-calendar-masonry-item-time">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="12" height="12"
+                                                                                    viewBox="0 0 12 12"
+                                                                                    aria-hidden="true"
+                                                                                    class="Time__Icon-sc-f5e943dd-1 iJgEnM eapp-events-calendar-time-icon">
+                                                                                    <path
+                                                                                        d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm.984-4.97a.454.454 0 0 1-.07.154l-.026.038a.5.5 0 0 1-.655.148L3.55 5.857a.454.454 0 0 1-.149-.655.551.551 0 0 1 .722-.164l1.877 1.059V2.9a.5.5 0 1 1 1 0v4a.5.5 0 0 1-.017.13z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="Time__Text-sc-f5e943dd-2 fVbGFx eapp-events-calendar-time-text">
+                                                                                    <div tabindex="0"
+                                                                                        aria-label="Start time: 2:00 p.m., end time: 6:00 p.m."
+                                                                                        class="Time__TimeComponent-sc-f5e943dd-3 bEjMob eapp-events-calendar-time-time">
+                                                                                        2:00 p.m. - 6:00 p.m.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Masonry__MasonryItemContainer-sc-f003aa10-4 gysiBU eapp-events-calendar-masonry-item"
+                                                            style="position: absolute; top: 0px; left: 0px; transform: translate(612px, 599px); width: 304px;">
+                                                            <div tabindex="0"
+                                                                aria-label="Event:  Inauguración y Brindis"
+                                                                class="MasonryItem__Component-sc-af5a1e58-2 lAlJN eapp-events-calendar-masonry-item-component eapp-events-calendar-masonry-item-imageBackground">
+                                                                <script
+                                                                    type="application/ld+json">{"@context":"http://schema.org/","@type":"Event","name":" Inauguración y Brindis","startDate":"2026-02-17","endDate":"2026-02-17","description":"Es el acto protocolario que da inicio oficial a un evento, marcando el comienzo de las actividades programadas. Este momento reúne a autoridades, invitados especiales y participantes para celebrar la apertura, compartir un mensaje de bienvenida y destacar la importancia del encuentro. El brindis simboliza los buenos deseos, el éxito y la colaboración entre todos los asistentes.","image":"https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/20678457-4f50-4671-9a6f-4b3c8a8ad46c/OIG1.jpg"}</script>
+                                                                <div class="MasonryItem__Inner-sc-af5a1e58-0 knxAEj eapp-events-calendar-masonry-item-inner"
+                                                                    style="border-radius: 0px;">
+                                                                    <div
+                                                                        class="MediaSection__ImageContainer-sc-d492f129-0 dTyIXI eapp-events-calendar-masonry-item-imageContainer">
+                                                                        <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/20678457-4f50-4671-9a6f-4b3c8a8ad46c/OIG1.jpg"
+                                                                            alt="Picture for ' Inauguración y Brindis' event"
+                                                                            loading="lazy"
+                                                                            class="Media__Image-sc-f0f5180f-0 cCLZNM eapp-events-calendar-media-image eapp-events-calendar-media-image-loaded"
+                                                                            style="opacity: 1;"></div>
+                                                                    <div
+                                                                        class="MasonryItem__Info-sc-af5a1e58-1 iCJnge eapp-events-calendar-masonry-item-info">
+                                                                        <div
+                                                                            class="Category__CategoryComponent-sc-589890d7-0 biBToU eapp-events-calendar-category-component CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                            <div aria-label="Event category"
+                                                                                class="Category__CategoryItem-sc-589890d7-1 gOWTTu eapp-events-calendar-category-item CategorySection__CategoryComponent-sc-7eb44072-0 gSgQJp eapp-events-calendar-masonry-item-category">
+                                                                                Ceremonias</div>
+                                                                        </div>
+                                                                        <div class="Name__Component-sc-861ba5b5-0 WMXJH eapp-events-calendar-name-component NameSection__NameComponent-sc-e9a6cf1d-0 kMhApT eapp-events-calendar-masonry-item-name"
+                                                                            aria-label="Event name"> Inauguración y
+                                                                            Brindis</div>
+                                                                        <div
+                                                                            class="LocationAndTimeSection__LocationAndTime-sc-b047c37d-0 dBMaOK eapp-events-calendar-masonry-item-locationAndTime">
+                                                                            <div
+                                                                                class="Time__Component-sc-f5e943dd-0 funoZE eapp-events-calendar-time-component LocationAndTimeSection__TimeComponent-sc-b047c37d-1 dOUgVk eapp-events-calendar-masonry-item-time">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="12" height="12"
+                                                                                    viewBox="0 0 12 12"
+                                                                                    aria-hidden="true"
+                                                                                    class="Time__Icon-sc-f5e943dd-1 iJgEnM eapp-events-calendar-time-icon">
+                                                                                    <path
+                                                                                        d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm.984-4.97a.454.454 0 0 1-.07.154l-.026.038a.5.5 0 0 1-.655.148L3.55 5.857a.454.454 0 0 1-.149-.655.551.551 0 0 1 .722-.164l1.877 1.059V2.9a.5.5 0 1 1 1 0v4a.5.5 0 0 1-.017.13z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="Time__Text-sc-f5e943dd-2 fVbGFx eapp-events-calendar-time-text">
+                                                                                    <div tabindex="0"
+                                                                                        aria-label="Start time: 6:00 p.m., end time: 7:00 p.m."
+                                                                                        class="Time__TimeComponent-sc-f5e943dd-3 bEjMob eapp-events-calendar-time-time">
+                                                                                        6:00 p.m. - 7:00 p.m.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="Layout__Pagination-sc-ddb2e617-1 dPXmnw eapp-events-calendar-layout-pagination">
+                                            <button size="18"
+                                                class="ButtonBase__ButtonContainer-sc-13c20b81-3 dklTPK es-button-base-container Layout__PaginationButton-sc-ddb2e617-4 hawEHL"
+                                                type="button"
+                                                style="border-radius: 24px; border-color: rgb(255, 255, 255); line-height: 24px; color: rgb(255, 255, 255); padding: 0px; font-family: inherit; font-weight: bold; font-size: 18px; background-color: rgba(0, 0, 0, 0); text-transform: none; border-width: 2px;"><span
+                                                    class="ButtonBase__Overlay-sc-13c20b81-4 dGEniD es-button-base-overlay"
+                                                    style="padding: 10px 25px; border-radius: calc(22px); background-color: rgba(0, 0, 0, 0);"><span
+                                                        class="ButtonBase__Ellipsis-sc-13c20b81-5 kAZZaw es-button-base-ellipsis">Próximos
+                                                        eventos</span>
+                                                    <div
+                                                        class="Icon__IconContainer-sc-1013a803-0 kqAJwl ButtonBase__ButtonIcon-sc-13c20b81-0 ButtonBase__RightIcon-sc-13c20b81-2 idLJTk klsljm es-button-base-icon es-button-base-right-icon">
+                                                        <div>
+                                                            <div class="Icon__IconContainer-sc-1013a803-0 kMpOqP">
+                                                                <div><svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 20 20">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M8.374 2.626a1 1 0 0 0-1.498 1.32l.084.094L12.919 10l-5.96 5.96a1 1 0 0 0-.083 1.32l.084.094a1 1 0 0 0 1.32.083l.094-.083 6.666-6.667a1 1 0 0 0 .084-1.32l-.084-.094-6.666-6.667Z">
+                                                                        </path>
+                                                                    </svg></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </span></button></div>
+                                    </div>
+                                </div><a
+                                    href="https://elfsight.com/event-calendar-widget/?utm_source=websites&amp;utm_medium=clients&amp;utm_content=event-calendar&amp;utm_term=rodrigovarab.github.io&amp;utm_campaign=free-widget"
+                                    target="_blank" rel="noreferrer"
+                                    style="animation:none!important;border:none!important;position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:50%!important;margin:8px auto!important;display:inline-flex!important;flex-wrap:wrap!important;align-content:center!important;align-items:center!important;justify-content:center!important;row-gap:0px!important;float:none!important;opacity:1!important;transform:translateX(-50%)!important;zoom:1!important;visibility:visible!important;box-sizing:border-box!important;font-family:Roboto,Arial,Sans-serif!important;text-align:left!important;text-decoration:none!important;max-width:400px!important;text-indent:0!important;background-color:rgba(238, 238, 238, 0.9)!important;color:rgba(17, 17, 17, 0.5)!important;padding:4px 12px 4px 6px!important;height:24px!important;column-gap:5px!important;line-height:14px!important;font-size:12px!important;font-weight:600!important;border-radius:40px!important;margin-top:20px!important;width:max-content!important"><svg
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                        style="display:block!important;fill:currentColor!important;width:16px!important;height:16px!important">
+                                        <path
+                                            d="M8.28439 0.619913C12.3385 0.762025 15.5217 4.18821 15.3801 8.25775C15.2385 12.3271 11.825 15.5221 7.77092 15.38C3.71669 15.2379 0.533499 11.8117 0.67508 7.74231C0.681887 7.54618 0.691595 7.35236 0.714312 7.16072C0.725872 7.06324 0.877483 6.32426 1.53911 6.41239C2.03511 6.4785 2.19208 6.91401 2.15542 7.24594C2.14837 7.30974 2.13399 7.4785 2.13399 7.4785C2.12489 7.58249 2.11845 7.68724 2.11474 7.79276C2.00087 11.0653 4.56082 13.8207 7.82114 13.935C11.0814 14.0493 13.8265 11.4798 13.9404 8.20729C14.0543 4.93459 11.4943 2.17923 8.23413 2.06493C7.92633 2.05415 7.62308 2.06746 7.32627 2.10294L7.14896 2.12687C7.14896 2.12687 6.29609 2.26862 6.10609 1.69051C5.92226 1.13111 6.35172 0.807509 6.64245 0.746823C7.17277 0.644899 7.72238 0.600183 8.28439 0.619913ZM0.377094 1.37956C0.445891 1.37956 0.510217 1.39852 0.565762 1.43111L8.32629 5.42412C8.34941 5.43552 8.37216 5.44736 8.3948 5.45937L8.42404 5.47441L8.42368 5.47482L8.50269 5.51975C9.15218 5.90418 9.57631 6.53595 9.57631 7.25063C9.57631 7.25597 9.57587 7.26119 9.57583 7.26652L9.57631 7.26596L9.5764 9.94954C9.57641 9.97238 9.57642 9.99453 9.57643 10.016L9.57676 10.4381C9.57677 10.4482 9.57678 10.4577 9.5768 10.4666L9.57696 10.567C9.57704 10.5702 9.5774 10.5733 9.5774 10.5765C9.5774 10.7875 9.40855 10.9584 9.20018 10.9584C9.13614 10.9584 9.07588 10.9421 9.02304 10.9136L7.2201 10.0035L7.22247 10.0007C6.49144 9.66056 5.99601 9.01497 5.98896 8.27267C5.98848 7.71587 5.90067 7.06934 5.0132 6.30206C4.46012 5.824 3.79937 5.24999 3.14497 4.68033L2.93866 4.50069C1.60076 3.33554 0.340225 2.23316 0.143314 2.06093L0.121764 2.04209C0.118421 2.03914 0.116165 2.0372 0.116165 2.0372L0.0873202 2.00556C0.0328777 1.93938 0 1.85438 0 1.7615C0 1.5505 0.168851 1.37956 0.377094 1.37956Z">
+                                        </path>
+                                    </svg>Free Event Calendar Widget</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
